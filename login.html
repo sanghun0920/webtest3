@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 - GAME SQUARE</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">GAME SQUARE</div>
+    <nav>
+      <a href="main.html">메인</a>
+      <a href="gamelist.html">리뷰</a>
+      <a href="login.html">로그인</a>
+      <a href="signup.html">회원가입</a>
+    </nav>
+  </header>
+
+  <main style="padding: 40px; max-width: 400px; margin: auto;">
+    <h2>🔐 로그인</h2>
+    <input type="text" id="login-username" placeholder="아이디" required><br><br>
+    <input type="password" id="login-password" placeholder="비밀번호" required><br><br>
+    <button onclick="login()">로그인</button>
+    <p>계정이 없으신가요? <a href="signup.html">회원가입</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 GAME SQUARE. All rights reserved.</p>
+  </footer>
+</body>
+</html>

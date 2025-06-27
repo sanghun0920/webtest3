@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>엘든 링 리뷰 - GAME SQUARE</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .rating {
+      margin: 1rem 0;
+    }
+
+    .star {
+      font-size: 2rem;
+      color: gray;
+      cursor: pointer;
+    }
+
+    .star.checked {
+      color: gold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .comments {
+      margin-top: 2rem;
+    }
+
+    .comment {
+      background: #f2f2f2;
+      padding: 0.7rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-size: 1.5rem; font-weight: bold;">GAME SQUARE</div>
+    <nav>
+      <a href="main.html">메인</a>
+      <a href="gamelist.html">리뷰</a>
+      <a href="login.html">로그인</a>
+      <a href="mypage.html">마이페이지</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>엘든 링</h1>
+    <img src="eldenring.jpg" alt="엘든 링">
+    <p>
+      엘든 링은 FromSoftware가 개발한 오픈 월드 액션 RPG입니다. 압도적인 세계관과
+      난이도로 유명하며, 다양한 빌드와 깊이 있는 전투 시스템을 자랑합니다.
+    </p>
+
+    <div class="rating">
+      <span class="star" onclick="rate(1)">★</span>
+      <span class="star" onclick="rate(2)">★</span>
+      <span class="star" onclick="rate(3)">★</span>
+      <span class="star" onclick="rate(4)">★</span>
+      <span class="star" onclick="rate(5)">★</span>
+    </div>
+
+    <textarea id="commentBox" placeholder="댓글을 입력하세요..."></textarea>
+    <button onclick="addComment()">댓글 등록</button>
+
+    <div class="comments" id="commentList"></div>
+  </div>
+
+  <footer>
+    ⓒ 2025 GAME SQUARE. All rights reserved.
+  </footer>
+
+  <script>
+    function rate(score) {
+      const stars = document.querySelectorAll('.star');
+      stars.forEach((star, index) => {
+        if (index < score) {
+          star.classList.add('checked');
+        } else {
+          star.classList.remove('checked');
+        }
+      });
+    }
+
+    function addComment() {
+      const text = document.getElementById("commentBox").value;
+      if (text.trim() === "") return;
+
+      const commentDiv = document.createElement("div");
+      commentDiv.className = "comment";
+      commentDiv.innerText = text;
+
+      document.getElementById("commentList").appendChild(commentDiv);
+      document.getElementById("commentBox").value = "";
+    }
+  </script>
+</body>
+</html>

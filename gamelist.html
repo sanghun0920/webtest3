@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>GAME SQUARE - 게임 리뷰 리스트</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card-list {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-size: 1.5rem; font-weight: bold;">GAME SQUARE</div>
+    <nav>
+      <a href="main.html">메인</a>
+      <a href="gamelist.html">리뷰</a>
+      <a href="login.html">로그인</a>
+      <a href="mypage.html">마이페이지</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>🔥 최신 게임 리뷰 리스트</h2>
+    <div class="card-list">
+      <!-- 카드 1: 롤 -->
+      <div class="card">
+        <img src="lol.jpg" alt="롤">
+        <h3>리그 오브 레전드</h3>
+        <p>MOBA 장르의 대표작, 수많은 챔피언과 전략의 세계!</p>
+        <a href="review_lol.html">리뷰 보기</a>
+      </div>
+
+      <!-- 카드 2: 엘든 링 -->
+      <div class="card">
+        <img src="eldenring.jpg" alt="엘든 링">
+        <h3>엘든 링</h3>
+        <p>죽음은 배움이다. FromSoftware의 압도적 명작.</p>
+        <a href="review_eldenring.html">리뷰 보기</a>
+      </div>
+
+      <!-- 카드 3: 젤다 -->
+      <div class="card">
+        <img src="zelda.jpg" alt="젤다의 전설">
+        <h3>젤다의 전설: 왕국의 눈물</h3>
+        <p>광활한 하이랄을 자유롭게 탐험하라!</p>
+        <a href="review_zelda.html">리뷰 보기</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    ⓒ 2025 GAME SQUARE. All rights reserved.
+  </footer>
+</body>
+</html>

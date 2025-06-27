@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>리뷰 상세 - GAME SQUARE</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">GAME SQUARE</div>
+    <nav>
+      <a href="main.html">메인</a>
+      <a href="gamelist.html">리뷰</a>
+      <a href="login.html">로그인</a>
+      <a href="mypage.html">마이페이지</a>
+    </nav>
+  </header>
+
+  <main style="padding: 40px;">
+    <h2>🎮 엘든 링 리뷰</h2>
+    <p>압도적인 세계관과 전투의 손맛. 죽음을 통해 성장하는 쾌감!</p>
+
+    <section style="margin-top: 30px;">
+      <h3>⭐ 별점 평가</h3>
+      <div class="rating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </section>
+
+    <section style="margin-top: 30px;">
+      <h3>💬 댓글</h3>
+      <ul id="comment-list" style="margin-bottom: 10px;"></ul>
+      <input type="text" id="comment-input" placeholder="댓글을 입력하세요" style="padding: 5px; width: 300px;">
+      <button onclick="submitComment()">작성</button>
+    </section>
+
+    <section style="margin-top: 30px;">
+      <h3>👍 좋아요</h3>
+      <button onclick="likeReview()">좋아요</button>
+      <span id="like-count">0</span>명이 좋아합니다.
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GAME SQUARE. All rights reserved.</p>
+  </footer>
+</body>
+</html>
